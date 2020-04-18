@@ -12,7 +12,7 @@ before_install:
 install: true
 
 env:
-  - GROUP=haroldmei TRAVIS_TAG=latest COMMIT=$TRAVIS_COMMIT TAG=$TRAVIS_TAG REPO=catalogue;
+  - GROUP=haroldmei TRAVIS_TAG=latest TRAVIS_COMMIT=latest COMMIT=$TRAVIS_COMMIT TAG=$TRAVIS_TAG REPO=catalogue;
 
 script:
   - set -e
