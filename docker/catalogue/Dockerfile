@@ -1,11 +1,11 @@
 FROM golang:1.7
 
-COPY . /go/src/github.com/microservices-demo/catalogue
-WORKDIR /go/src/github.com/microservices-demo/catalogue
+COPY . /go/src/github.com/haroldmei/catalogue
+WORKDIR /go/src/github.com/haroldmei/catalogue
 
 RUN go get -u github.com/FiloSottile/gvt
 RUN gvt restore && \
-    CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o /app github.com/microservices-demo/catalogue/cmd/cataloguesvc
+    CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o /app github.com/haroldmei/catalogue/cmd/cataloguesvc
 
 FROM alpine:3.4
 
@@ -37,7 +37,7 @@ LABEL org.label-schema.vendor="Weaveworks" \
   org.label-schema.version="${BUILD_VERSION}" \
   org.label-schema.name="Socks Shop: Catalogue" \
   org.label-schema.description="REST API for Catalogue service" \
-  org.label-schema.url="https://github.com/microservices-demo/catalogue" \
+  org.label-schema.url="https://github.com/haroldmei/catalogue" \
   org.label-schema.vcs-url="github.com:microservices-demo/catalogue.git" \
   org.label-schema.vcs-ref="${COMMIT}" \
   org.label-schema.schema-version="1.0"
