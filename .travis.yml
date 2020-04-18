@@ -12,7 +12,7 @@ before_install:
 install: true
 
 env:
-  - GROUP=weaveworksdemos COMMIT=$TRAVIS_COMMIT TAG=$TRAVIS_TAG REPO=catalogue;
+  - GROUP=haroldmei TRAVIS_TAG=latest COMMIT=$TRAVIS_COMMIT TAG=$TRAVIS_TAG REPO=catalogue;
 
 script:
   - set -e
