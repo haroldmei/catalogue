@@ -21,7 +21,7 @@ services:
     catalogue-db:
         build:
             context: ./docker/catalogue-db/
-        image: haroldmei/catalogue-db
+        image: weaveworksdemos/catalogue-db
         hostname: catalogue-db
         restart: always
         environment:

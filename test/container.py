@@ -18,7 +18,7 @@ class CatalogueContainerTest(unittest.TestCase):
 
     def setUp(self):
         Docker().start_container(container_name=self.mysql_container_name,
-                image="haroldmei/catalogue-db:" + self.TAG,
+                image="weaveworksdemos/catalogue-db:" + self.TAG,
                 host=self.mysql_container_name,
                 env=[("MYSQL_ROOT_PASSWORD", ""),
                     ("MYSQL_ALLOW_EMPTY_PASSWORD", True),
