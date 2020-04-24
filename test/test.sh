@@ -6,12 +6,7 @@ SCRIPT_DIR=`dirname "$0"`
 SCRIPT_NAME=`basename "$0"`
 SSH_OPTS=-oStrictHostKeyChecking=no
 
-if [[ "$(uname)" == "Darwin" ]]; then
-    DOCKER_CMD=docker
-else
-    DOCKER_CMD="sudo docker"
-fi
-
+DOCKER_CMD=docker
 if [[ -z $($DOCKER_CMD images | grep test-container) ]] ; then
     echo "Building test container"
     docker build -t test-container $SCRIPT_DIR > /dev/null

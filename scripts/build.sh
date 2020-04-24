@@ -18,11 +18,8 @@ if [ -z "$COMMIT" ] ; then
 fi
 
 $(docker -v >/dev/null 2>&1)
-if [ $? -eq 0 ]; then
-    DOCKER_CMD=docker
-else
-    DOCKER_CMD=`sudo docker`
-fi
+
+DOCKER_CMD=docker
 CODE_DIR=$(cd $SCRIPT_DIR/..; pwd)
 echo $CODE_DIR
  
